@@ -1,0 +1,133 @@
+@charset 'UTF-8';
+
+/*
+reset
+normalize.cssより後で読み込むようにする事で、必要な部分をブラウザ対策した上で、一括reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/*
+clear関連
+*/
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+}
+
+/*
+float関連
+*/
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+
+/*
+display関連
+*/
+.d_block {
+    display: block;
+}
+.d_inline {
+    display: inline;
+}
+.d_inline-block {
+    display: inline-block;
+}
+.d_table {
+    display: table;
+}
+.d_tablecell {
+    display: table-cell
+}
+.d_flex {
+    display: flex;
+}
+.d_none {
+    display: none;
+}
+
+/*
+visibility関連
+*/
+.v_visible {
+    visibility: visible;
+}
+.v_hidden {
+    visibility: hidden;
+}
+
+/*
+position関連
+*/
+.p_fixed {
+    position: fixed;
+}
+.p_absolute {
+    position: absolute;
+}
+.p_relative {
+    position: relative;
+}
+.p_static {
+    position: static;
+}
+
+/*
+a
+初期underlineを削除
+*/
+a {
+    text-decoration: none;
+}
+
+/*
+ul,ol
+標準装飾削除
+*/
+ul,ol {
+    list-style: none;
+}
+
+/*
+img
+上記で一括vertical-alignを設定している為、上書きで指定
+*/
+img {
+    vertical-align: bottom;
+    border: none;
+}
+
+/*
+body
+*/
+body {
+    line-height: 1;
+}
+
