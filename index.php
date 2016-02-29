@@ -4,30 +4,32 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="line(ライン)サンプル掲示板です。授業のログなどの保持に最適です。">
 		<meta name="keywords" content="alwida,アルビダ">
-		<link rel="stylesheet" href="normalize.css" type="text/css">
-		<link rel="stylesheet" href="common.css" type="text/css">
-		<link rel="stylesheet" href="structure.css" type="text/css">
-		<link rel="stylesheet" href="skin.css" type="text/css">
+		<link rel="stylesheet" href="./css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="./css/common.css" type="text/css">
+		<link rel="stylesheet" href="./css/structure.css" type="text/css">
+		<link rel="stylesheet" href="./css/skin.css" type="text/css">
+        <link rel="stylesheet" href="./css/skin_line.css" type="text/css">
+        <link rel="stylesheet" href="./css/structer.css" type="text/css">
 		<title>line(サンプル)</title>
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<h1 class="invisible">line-sample</h1>
-				<nav>
+		<div class="container h_vh_100 bg_c_green">
+			<header class="h_vh_10 bg_c_gray clearfix">
+				<h1 class="v_hidden f_left w_20">line-sample</h1>
+				<nav class="f_right w_40 clearfix">
 					<ul>
-						<li>home</li>
-						<li>talk</li>
-						<li>config</li>
-						<li>logout</li>
+						<li class="f_left w_c_4">home</li>
+						<li class="f_left w_c_4">talk</li>
+						<li class="f_left w_c_4">config</li>
+						<li class="f_left w_c_4">logout</li>
 					</ul>
-				</nav>
-				<div>
-					<p>ここにログイントップ画像が入ります。</p>
-				</div>
+                </nav>
 			</header>
-			<main>
-				<form action="" method="post">
+            <div class="h_vh_50">
+                <p>ここにログイントップ画像が入ります。</p>
+            </div>
+			<main class="clearfix">
+				<form class="f_left w_c_2" action="new_login.php" method="post">
 					<p>
 						<label for="new">アカウント新規作成</label>
 						<input type="submit" value="作成">
@@ -37,9 +39,20 @@
 						<input type="submit" value="ログイン">
 					</p>
 				</form>
+                <form class="f_right w_c_2" action="login.php" method="post">
+					<p>
+						<label for="login">ログイン</label>
+						<input type="submit" value="ログイン">
+					</p>
+				</form>
 			</main>
 			<footer>
-				<p>ログアウトボタン</p>
+                <form action="logout.php" method="post">
+                    <p>
+                    <label>ログアウトボタン</label>
+                    <input type="submit">
+                    </p>
+                </form>
 			</footer>
 		</div>
 		
