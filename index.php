@@ -34,10 +34,6 @@
 						<label for="new">アカウント新規作成</label>
 						<input type="submit" value="作成">
 					</p>
-					<p>
-						<label for="login">ログイン</label>
-						<input type="submit" value="ログイン">
-					</p>
 				</form>
                 <form class="f_right w_c_2" action="login.php" method="post">
 					<p>
