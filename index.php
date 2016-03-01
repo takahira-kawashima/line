@@ -23,22 +23,18 @@
                     <img class="logo_shape_img" src="http://placehold.jp/60x60.png" width="100%">
                 </div>
             </div>
+            
             <div class="login_area">
-                <form class="clearfix" action="" method="post">
-                    <p class="login_posi">ID<br><input class="login_word" type="text"></p>
-                    <p class="login_posi">PASS<br><input class="login_word" type="text"></p>
+                <form class="clearfix" action="./home.php" method="post">
+                    <p class="login_posi space-bottom">ID<br><input name="email"  class="login_word" type="email" required></p>
+                    <p class="login_posi">PASS<br><input name="pass" class="login_word" type="password" required></p>
                     <p class="login_button"><input type="submit" value="ログイン"></p>
-			<main class="clearfix">
-				<form class="f_left w_c_2" action="new_login.php" method="post">
-					
-				</form>
-                <form class="f_right w_c_2" action="login.php" method="post">
-					
-				</form>
-			</main>
-                <div class="new_account">
-                    <p class="new_account_button"><input type="submit" value="作成"></p>
-                </div>
+                </form>
+                <form action="new_login.php" method="post">
+                    <div class="new_account">
+                        <p class="new_account_button"><input class="new_account_go" type="submit" value="新規アカウント作成はこちら"></p>
+                    </div>
+                </form>
             </div>
 		</div>
         

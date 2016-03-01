@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
-//コメント
-=======
-session_start();
+    session_start();
 ?>
 
 <!doctype html>
@@ -53,4 +50,4 @@ session_start();
         </footer>
     </body>
 </html>
->>>>>>> 46e1ac575f98414f15bdff2dae59eb520203ff00
+
