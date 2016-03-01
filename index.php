@@ -54,6 +54,7 @@
 		
 		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 		<script src="./js/functions.js">
+        </script>
 	</body>
 </html>
 

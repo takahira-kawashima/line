@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="ja">
 	<head>
@@ -18,22 +23,22 @@
             <p>新規アカウントを作成するため、下記情報を記載してください。</p>
         </header>
         <main>
-            <form action="" method="post">
+            <form action="./new_log_check.php" method="post">
                 <p>
                     <label for="name">お名前</label>
                     <input type="text" name="name" required>
                 </p>
                 <p>
-                    <label for="user_id">アカウント名</label>
+                    <label for="email">アカウント名(メールアドレス)</label>
                     
-                    <input type="text" name="user_id" required>
+                    <input type="email" name="email" required>
                 </p>
                 <p>
                     <label for="pass">パスワード</label>
                     <input type="password" name="pass" required>
                 </p>
                 <p>
-                    <input type="submit" value="赤アカウント作成">
+                    <input type="submit" value="アカウント作成">
                 </p>
             </form>
         </main>

@@ -5,7 +5,7 @@ require_once('./php/lib/functions.php');
 require_once('./php/lib/info.php');
 require_once('./php/lib/db_init.php');
 
-$user_id = h($_POST['user_id']);
+$email = h($_POST['email']);
 $user_pass = h($_POST['pass']);
 
 ?>
@@ -26,17 +26,23 @@ $user_pass = h($_POST['pass']);
 	</head>
 	<body>
         <header>
-            <h1>ホーム画面(仮)</h1>
+            <h1>チェック画面(仮)</h1>
         </header>
         <main>
         <?php
-            $ps = $db->query("SELECT pass FROM user WHERE user_id='$user_id'");
+            $ps = $db->query("SELECT email,pass FROM user WHERE email='$email'");
             $r = $ps->fetch();
-            if($r['pass'] === $user_pass) {
-                $_SESSION['user_id'] = $user_id;
+            if($r['email'] === $email && $r['pass'] === $user_pass) {
+                $_SESSION['email'] = $email;
+                $_SESSION['pass'] = $user_pass;
                 header("Location: ./home.php");
+            } elseif($r['email'] !== $email) {
+                $message = 'メールアドレスが間違っています。';
+                $_SESSION['error'] = $message;
+                header("Location: ./login.php");
             } else {
-                session_destroy();
+                $message = 'パスワードが間違っています。';
+                $_SESSION['error'] = $message;
                 header("Location: ./login.php");
             }
         ?>

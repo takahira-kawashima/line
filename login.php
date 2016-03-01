@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="ja">
 	<head>
@@ -17,15 +21,24 @@
             <h1>ログイン画面</h1>
         </header>
         <main>
-            <form action="" method="post">
+            <form action="./home.php" method="post">
                 <p>
-                    <label for="user_id">アカウント名</label>
+                    <label for="email">アカウント名(メールアドレスを記入してください)</label>
                     
-                    <input type="text" name="user_id" required>
+                    <input type="email" name="email" required>
                 </p>
                 <p>
                     <label for="pass">パスワード</label>
                     <input type="password" name="pass" required>
+                    <?php
+                    if(count($_SESSION) !== 0):
+				        foreach($_SESSION["error"] as $val):
+		            ?>
+			        <p><?php echo $val;?></p>
+		            <?php
+				        endforeach; 
+			        endif;
+                    ?>
                 </p>
                 <p>
                     <input type="submit" value="ログイン">
