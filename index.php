@@ -27,10 +27,17 @@
                 <form class="clearfix" action="" method="post">
                     <p class="login_posi">ID<br><input class="login_word" type="text"></p>
                     <p class="login_posi">PASS<br><input class="login_word" type="text"></p>
-                    <p class="login_button"><button>ログイン</button></p>
-                </form>
+                    <p class="login_button"><input type="submit" value="ログイン"></p>
+			<main class="clearfix">
+				<form class="f_left w_c_2" action="new_login.php" method="post">
+					
+				</form>
+                <form class="f_right w_c_2" action="login.php" method="post">
+					
+				</form>
+			</main>
                 <div class="new_account">
-                    <p class="new_account_button">新規アカウント作成はこちらから</p>
+                    <p class="new_account_button"><input type="submit" value="作成"></p>
                 </div>
             </div>
 		</div>
@@ -39,6 +46,8 @@
 		
 		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
         <script src="./js/functions.js"></script>
+		<script src="./js/functions.js"></script>
+
 	</body>
 </html>
 

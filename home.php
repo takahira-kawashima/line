@@ -1,3 +1,7 @@
+<?php
+//session_start();
+
+?>
 <!doctype html>
 <html lang="ja">
 	<head>
@@ -13,19 +17,6 @@
 		<title>line(サンプル)</title>
 	</head>
 	<body>
-        <header>
-            <h1>ログアウト完了画面</h1>
-        </header>
-        <main>
-            <p>ログアウトが完了しました。<br>ご利用ありがとうございました。</p>
-            <p>再度ログインをされる方はこちら</p>
-            <form action="./login.php" method="post">
-                <p>
-                    <input type="submit" value="ログイン画面へ">
-                </p>
-            </form>
-        </main>
-        <footer>
-        </footer>
+        <h1>ホーム画面</h1>
     </body>
 </html>
