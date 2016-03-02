@@ -10,51 +10,40 @@
 		<link rel="stylesheet" href="./css/skin.css" type="text/css">
         <link rel="stylesheet" href="./css/skin_line.css" type="text/css">
         <link rel="stylesheet" href="./css/structer.css" type="text/css">
+        <link rel="stylesheet" href="./css/0229.css" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 		<title>line(サンプル)</title>
 	</head>
-	<body>
-		<div class="container h_vh_100 bg_c_green">
-			<header class="h_vh_10 bg_c_gray clearfix">
-				<h1 class="v_hidden f_left w_20">line-sample</h1>
-				<nav class="f_right w_40 clearfix">
-					<ul>
-						<li class="f_left w_c_4">home</li>
-						<li class="f_left w_c_4">talk</li>
-						<li class="f_left w_c_4">config</li>
-						<li class="f_left w_c_4">logout</li>
-					</ul>
-                </nav>
-			</header>
-            <div class="h_vh_50">
-                <p>ここにログイントップ画像が入ります。</p>
+	
+	<body class="bg_c_body  h_vh_80">
+        
+		<div class="container">
+            <div class="logo">
+                <div class="logo_shape">
+                    <img class="logo_shape_img" src="http://placehold.jp/60x60.png" width="100%">
+                </div>
             </div>
-			<main class="clearfix">
-				<form class="f_left w_c_2" action="new_login.php" method="post">
-					<p>
-						<label for="new">アカウント新規作成</label>
-						<input type="submit" value="作成">
-					</p>
-				</form>
-                <form class="f_right w_c_2" action="login.php" method="post">
-					<p>
-						<label for="login">ログイン</label>
-						<input type="submit" value="ログイン">
-					</p>
-				</form>
-			</main>
-			<footer>
-                <form action="logout.php" method="post">
-                    <p>
-                    <label>ログアウトボタン</label>
-                    <input type="submit">
-                    </p>
+            
+            <div class="login_area">
+                <form class="clearfix" action="./home.php" method="post">
+                    <p class="login_posi space-bottom">ID<br><input name="email"  class="login_word" type="email" required></p>
+                    <p class="login_posi">PASS<br><input name="pass" class="login_word" type="password" required></p>
+                    <p class="login_button"><input type="submit" value="ログイン"></p>
                 </form>
-			</footer>
+                <form action="new_login.php" method="post">
+                    <div class="new_account">
+                        <p class="new_account_button"><input class="new_account_go" type="submit" value="新規アカウント作成はこちら"></p>
+                    </div>
+                </form>
+            </div>
 		</div>
+        
+        
 		
 		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-		<script src="./js/functions.js">
-        </script>
+        <script src="./js/functions.js"></script>
+		<script src="./js/functions.js"></script>
+
 	</body>
 </html>
 
