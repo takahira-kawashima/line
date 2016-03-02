@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="ja">
 	<head>
@@ -25,8 +28,8 @@
             </div>
             
             <div class="login_area">
-                <form class="clearfix" action="./home.php" method="post">
-                    <p class="login_posi space-bottom">ID<br><input name="email"  class="login_word" type="email" required></p>
+                <form class="clearfix" action="./check.php" method="post">
+                    <p class="login_posi space-bottom">E-mail<br><input name="email"  class="login_word" type="email" required></p>
                     <p class="login_posi">PASS<br><input name="pass" class="login_word" type="password" required></p>
                     <p class="login_button"><input type="submit" value="ログイン"></p>
                 </form>
@@ -35,6 +38,15 @@
                         <p class="new_account_button"><input class="new_account_go" type="submit" value="新規アカウント作成はこちら"></p>
                     </div>
                 </form>
+                <?php
+                if(count($_SESSION) !== 0) {
+                    foreach($_SESSION['error'] as $val) { ?>
+                <p><?php echo $val;?></p>
+                <?php
+                    }
+                }
+                session_destroy();
+            ?>
             </div>
 		</div>
         

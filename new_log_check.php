@@ -43,7 +43,5 @@ $stmt->execute(array(
             ':pass'=>$pass
               ));
 
-$_SESSION['name'] = $name;
 $_SESSION['email'] = $email;
-$_SESSION['pass'] = $pass;
 header("Location: ./home.php");

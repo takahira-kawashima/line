@@ -18,44 +18,6 @@ session_start();
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 		<title>line(サンプル)</title>
 	</head>
-<<<<<<< HEAD
-	<body>
-        <header>
-            <h1>アカウント作成画面</h1>
-            <p>新規アカウントを作成するため、下記情報を記載してください。</p>
-        </header>
-        <main>
-            <form action="./new_log_check.php" method="post">
-                <p>
-                    <label for="name">お名前</label>
-                    <input type="text" name="name" required>
-                </p>
-                <p>
-                    <label for="email">アカウント名(メールアドレス)</label>
-                    
-                    <input type="email" name="email" required>
-                </p>
-                <p>
-                    <label for="pass">パスワード</label>
-                    <input type="password" name="pass" required>
-                </p>
-                <p>
-                    <input type="submit" value="アカウント作成">
-                </p>
-            </form>
-            <div>
-            <?php
-                if(count($_SESSION) !== 0) {
-                    foreach($_SESSION['error'] as $val) { ?>
-                <p><?php echo $val;?></p>
-                <?php
-                    }
-                }
-                session_destroy();
-            ?>
-            </div>
-        </main>
-=======
 	<body  class="bg_c_body  h_vh_80">
         <div class="container">
             <header>
@@ -74,7 +36,6 @@ session_start();
                 </form>
             </main>
         </div>
->>>>>>> 92c1cc396bc2e4ec9cd025766a5a94ac62261daa
         <footer>
             
         </footer>

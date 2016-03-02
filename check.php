@@ -36,7 +36,8 @@ if($stmt['email'] === $email && $stmt['pass'] === $pass) {
 
 if($message !== NULL) {
     $_SESSION['error'] = $message;
-    header("Location: ./login.php");
+    header("Location: ./index.php");
 } else {
+    $_SESSION['email'] = $email;
     header("Location: ./home.php");
 }

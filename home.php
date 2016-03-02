@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+require_once('./php/lib/functions.php');
+require_once('./php/lib/info.php');
+require_once('./php/lib/db_init.php');
+
+$email = h($_SESSION['email']);
+
+$stmt = $db->query("SELECT * FROM user WHERE email='$email'");
+
+?>
 <!doctype html>
 <html lang="ja">
 	<head>
@@ -19,11 +31,11 @@
             <nav class="nav f_left w_px_100">
                 <div class="h_vh_100 nav_inner">
                     <ul>
-                    <li>home</li>
-                    <li>talk</li>
-                    <li>member</li>
-                    <li>option</li>
-                </ul>
+                        <li>home</li>
+                        <li>talk</li>
+                        <li>member</li>
+                        <li>option</li>
+                    </ul>
                 </div>
             </nav>
             
@@ -38,6 +50,13 @@
                 <div class="home_content">
                     <div class="home_my_profile mh_200 pad_20">
                         <div class="home_my_profile_inner w_60 mar_0_auto h_px_150">
+                            <?php foreach($stmt as $key):?>
+                            <a href="./my_prof_edit.php?id=<?php echo $key['id'];?>">
+                            <p>img:ここにサムネ画像が入ります</p>
+                            <p>name:<?php echo $key['name']; ?></p>
+                            <p>comment:<?php echo $key['comment'];?></p>
+                            <?php endforeach;?>
+                          </a>  
                         </div>
                     </div>
                     
