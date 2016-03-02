@@ -21,7 +21,7 @@ session_start();
             <h1>ログイン画面</h1>
         </header>
         <main>
-            <form action="./home.php" method="post">
+            <form action="./check.php" method="post">
                 <p>
                     <label for="email">アカウント名(メールアドレスを記入してください)</label>
                     
@@ -30,20 +30,23 @@ session_start();
                 <p>
                     <label for="pass">パスワード</label>
                     <input type="password" name="pass" required>
-                    <?php
-                    if(count($_SESSION) !== 0):
-				        foreach($_SESSION["error"] as $val):
-		            ?>
-			        <p><?php echo $val;?></p>
-		            <?php
-				        endforeach; 
-			        endif;
-                    ?>
                 </p>
                 <p>
                     <input type="submit" value="ログイン">
                 </p>
             </form>
+            
+            <div>
+            <?php
+                if(count($_SESSION) !== 0) {
+                    foreach($_SESSION['error'] as $val) { ?>
+                <p><?php echo $val;?></p>
+                <?php
+                    }
+                }
+                session_destroy();
+            ?>
+            </div>
         </main>
         <footer>
             

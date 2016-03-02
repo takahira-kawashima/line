@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!doctype html>
@@ -41,6 +40,17 @@ session_start();
                     <input type="submit" value="アカウント作成">
                 </p>
             </form>
+            <div>
+            <?php
+                if(count($_SESSION) !== 0) {
+                    foreach($_SESSION['error'] as $val) { ?>
+                <p><?php echo $val;?></p>
+                <?php
+                    }
+                }
+                session_destroy();
+            ?>
+            </div>
         </main>
         <footer>
             
