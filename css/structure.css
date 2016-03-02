@@ -386,6 +386,12 @@ height
     height: 300px;
 }
 /*min-height*/
+.mh_100 {
+    min-height: 100px;
+}
+.mh_200 {
+    min-height: 200px;
+}
 .mh_300 {
     min-height: 300px;
 }
