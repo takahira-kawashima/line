@@ -11,27 +11,32 @@ $pass = h($_POST['pass']);
 $message = NULL;
 
 $ps = $db->query("SELECT email,pass FROM user WHERE email='$email'");
-            $r = $ps->fetch();
 
-        var_dump($r);
-
-/*
-            if($r['email'] === $email && $r['pass'] === $pass) {
-                $email = $email;
-                $pass = $pass;
-            } elseif($r['email'] !== $email) {
-                $message[] = 'メールアドレスが間違っています。';
-            } else {
-                $message[] = 'パスワードが間違っています。';
-            }
+$stmt = $ps->fetch(PDO::FETCH_ASSOC);
 
 /*
+while($stmt = $ps->fetch(PDO::FETCH_ASSOC)) {
+    foreach($stmt as $key => $val) {
+        echo $val;
+        echo '<br>';
+    }
+}
+*/
+
+//print_r($stmt['email']);
+
+if($stmt['email'] === $email && $stmt['pass'] === $pass) {
+    $email = $email;
+    $pass = $pass;
+    } elseif($stmt['email'] !== $email) {
+        $message[] = 'メールアドレスが間違っています。';
+    } elseif($stmt['pass'] !== $pass) {
+        $message[] = 'パスワードが間違っています。';
+    }
+
 if($message !== NULL) {
     $_SESSION['error'] = $message;
     header("Location: ./login.php");
 } else {
-    $_SESSION['email'] = $email;
-    $_SESSION['pass'] = $pass;
     header("Location: ./home.php");
 }
-*/
