@@ -43,6 +43,6 @@
     background: #a3d4f4;
 }
 
-/*
-友達検索エリア
-*/
+.my_prof_img img{
+    width: 100%;
+}

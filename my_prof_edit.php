@@ -25,9 +25,9 @@ $stmt = $db->query("SELECT * FROM user WHERE id='$id'");
 	</head>
 	<body>
         <div class="container">
-            <form action="./my_prof_edit_exit.php" method="post">
+            <form action="./my_prof_edit_exit.php" method="post" enctype="multipart/form-data">
                 <?php foreach($stmt as $key):?>
-                <p>ここにサムネ画像が入ります</p>
+                <input type="file" name="myfile">
                 <p><?php echo $key['name'] ;?></p>
                 <textarea name="comment"><?php echo $key['comment'];?></textarea><br>
                 <p><input type="submit" value="更新する"></p>
