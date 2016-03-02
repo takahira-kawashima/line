@@ -14,16 +14,28 @@
 		<title>line(サンプル)</title>
 	</head>
 	<body>
-        <div class="w_100 clearfix">
-            <main class="w_100 f_right">
+        <div class="wrapper w_px_1000 clearfix">
+            
+            <nav class="nav f_left w_px_100">
+                <div class="h_vh_100 nav_inner">
+                    <ul>
+                    <li>home</li>
+                    <li>talk</li>
+                    <li>member</li>
+                    <li>option</li>
+                </ul>
+                </div>
+            </nav>
+            
+            <div class="main w_px_300 f_left h_vh_100">
+                <div class="f_search">
+                    <form action="./f_search.php" method="post">
+                        <p class="mar_b_20">友達グループ</p>
+                        <input type="text" name="name" placeholder="友達を名前で検索">
+                        <input type="submit" value="検索">
+                    </form>
+                </div>
                 <div class="home_content">
-                    <div class="f_search">
-                        <form action="./f_search.php" method="post">
-                            <p class="mar_b_20">友達グループ</p>
-                            <input type="text" name="email" placeholder="友達をIDで検索">
-                        </form>
-                    </div>
-                    
                     <div class="home_my_profile mh_200 pad_20">
                         <div class="home_my_profile_inner w_60 mar_0_auto h_px_150">
                         </div>
@@ -49,19 +61,13 @@
                             <p>グループサムネ3</p>
                         </div>
                     </div>
-                    
-                </div>
-            </main>
-            <nav class="nav f_left">
-                <div class="p_fixed h_vh_100 nav_inner">
-                    <ul>
-                    <li>home</li>
-                    <li>talk</li>
-                    <li>member</li>
-                    <li>option</li>
-                </ul>
-                </div>
-            </nav>
+                </div><!--home_content-->
+            </div>
+            
+            <div class="option_box w_px_600 f_left h_vh_100">
+                <p>ここにoption編集が入ります</p>
+            </div><!--option_box-->
+            
         </div>
     </body>
 </html>

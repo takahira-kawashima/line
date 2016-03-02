@@ -1,14 +1,8 @@
 @charset 'UTF-8';
-
-.home_content {
-    margin-left: 100px;
-    min-height: 2000px;
-    background-color: #a4a4a4;
+.wrapper {
+    overflow: hidden;
 }
-
 .nav {
-    width: 100px;
-    margin-right: -200px;
     background: #c8c8c8;
 }
 .nav_inner {
@@ -16,7 +10,12 @@
     color: #fff;
     width: 100px;
 }
-
+.main {
+   background-color: #a4a4a4; 
+}
+.home_content {
+    overflow: auto;
+}
 .f_search {
     text-align: center;
     padding: 20px;
@@ -38,4 +37,8 @@
 
 .home_g_profile {
     text-align: center;
+}
+
+.option_box {
+    background: #a3d4f4;
 }
