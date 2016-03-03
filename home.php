@@ -6,9 +6,27 @@ require_once('./php/lib/info.php');
 require_once('./php/lib/db_init.php');
 
 $email = h($_SESSION['email']);
+$_SESSION['email'] = $email;
 
 $stmt = $db->query("SELECT * FROM user WHERE email='$email'");
 
+/*
+foreach($stmt as $key) {
+    $id = $key['friend'];
+}
+$id_e = explode(',',$id);
+//var_dump($id_e);
+
+foreach($id_e as $key) {
+    while($stmt_friend = $db->query("SELECT * FROM user WHERE id=$key")) {
+        foreach($stmt_friend as $key) { ?>
+        <p class="w_px_100"><img class="w_100" src="./img/<?php echo $key['thumb'];?>"></p>
+        <?php    echo '<br>';
+            echo $key['name'];
+        }
+    }
+}
+*/
 ?>
 <!doctype html>
 <html lang="ja">
